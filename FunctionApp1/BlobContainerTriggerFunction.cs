@@ -9,7 +9,7 @@ namespace FunctionApp1
     public static class BlobContainerTriggerFunction
     {
         [FunctionName("BlobContainerTriggerFunction")]
-        public static void Run([BlobTrigger("container04032020/{name}", 
+        public static void Run([BlobTrigger("blob-container/{name}", 
             Connection = "BlobStorageConnString")]Stream myBlob, string name, ILogger log)
         {
             log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
